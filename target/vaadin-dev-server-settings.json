@@ -1,0 +1,16 @@
+{
+  "frontendFolder": "/home/dt17/Documents/CRM/./frontend",
+  "themeFolder": "themes",
+  "themeResourceFolder": "/home/dt17/Documents/CRM/./frontend/generated/jar-resources",
+  "staticOutput": "/home/dt17/Documents/CRM/target/classes/META-INF/VAADIN/webapp/VAADIN/static",
+  "generatedFolder": "generated",
+  "statsOutput": "/home/dt17/Documents/CRM/target/classes/META-INF/VAADIN/config",
+  "frontendBundleOutput": "/home/dt17/Documents/CRM/target/classes/META-INF/VAADIN/webapp",
+  "jarResourcesFolder": "/home/dt17/Documents/CRM/./frontend/generated/jar-resources",
+  "generatedFlowImportsFolder": "target/frontend",
+  "themeName": "flowcrmtutorial",
+  "clientServiceWorkerSource": "/home/dt17/Documents/CRM/target/sw.ts",
+  "pwaEnabled": true,
+  "offlineEnabled": true,
+  "offlinePath": "'offline.html'"
+}
