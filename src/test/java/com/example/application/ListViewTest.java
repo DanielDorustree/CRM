@@ -1,4 +1,4 @@
-package com.example.application.views.list;
+package com.example.application;
 
 import com.example.application.data.entity.Contact;
 import com.vaadin.flow.component.grid.Grid;

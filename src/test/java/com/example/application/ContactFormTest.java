@@ -1,4 +1,4 @@
-package com.example.application.views.list;
+package com.example.application;
 
 import com.example.application.data.entity.Company;
 import com.example.application.data.entity.Contact;
@@ -24,9 +24,9 @@ public class ContactFormTest {
     public void setupData() {
         companies = new ArrayList<>();
         company1 = new Company();
-        company1.setName("Vaadin Ltd");
+        company1.setName("Dorustree");
         company2 = new Company();
-        company2.setName("IT Mill");
+        company2.setName("10decoders");
         companies.add(company1);
         companies.add(company2);
 
@@ -39,9 +39,9 @@ public class ContactFormTest {
         statuses.add(status2);
 
         marcUsher = new Contact();
-        marcUsher.setFirstName("Marc");
-        marcUsher.setLastName("Usher");
-        marcUsher.setEmail("marc@usher.com");
+        marcUsher.setFirstName("Daniel");
+        marcUsher.setLastName("Imman");
+        marcUsher.setEmail("daniel@imman.com");
         marcUsher.setStatus(status1);
         marcUsher.setCompany(company2);
     }
@@ -50,9 +50,9 @@ public class ContactFormTest {
     public void formFieldsPopulated() {
         ContactForm form = new ContactForm(companies, statuses);
         form.setContact(marcUsher);
-        Assert.assertEquals("Marc", form.firstName.getValue());
-        Assert.assertEquals("Usher", form.lastName.getValue());
-        Assert.assertEquals("marc@usher.com", form.email.getValue());
+        Assert.assertEquals("Daniel", form.firstName.getValue());
+        Assert.assertEquals("Imman", form.lastName.getValue());
+        Assert.assertEquals("daniel@imman.com", form.email.getValue());
         Assert.assertEquals(company2, form.company.getValue());
         Assert.assertEquals(status1, form.status.getValue());
     }
@@ -62,10 +62,10 @@ public class ContactFormTest {
         ContactForm form = new ContactForm(companies, statuses);
         Contact contact = new Contact();
         form.setContact(contact);
-        form.firstName.setValue("John");
-        form.lastName.setValue("Doe");
+        form.firstName.setValue("Vel");
+        form.lastName.setValue("Sankar");
         form.company.setValue(company1);
-        form.email.setValue("john@doe.com");
+        form.email.setValue("vel@sankar.com");
         form.status.setValue(status2);
 
         AtomicReference<Contact> savedContactRef = new AtomicReference<>(null);
@@ -75,9 +75,9 @@ public class ContactFormTest {
         form.save.click();
         Contact savedContact = savedContactRef.get();
 
-        Assert.assertEquals("John", savedContact.getFirstName());
-        Assert.assertEquals("Doe", savedContact.getLastName());
-        Assert.assertEquals("john@doe.com", savedContact.getEmail());
+        Assert.assertEquals("Vel", savedContact.getFirstName());
+        Assert.assertEquals("Sankar", savedContact.getLastName());
+        Assert.assertEquals("vel@sankar.com", savedContact.getEmail());
         Assert.assertEquals(company1, savedContact.getCompany());
         Assert.assertEquals(status2, savedContact.getStatus());
     }
