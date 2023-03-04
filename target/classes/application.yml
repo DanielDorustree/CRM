@@ -9,11 +9,10 @@ spring:
       baselineOnMigrate: true
       validateOnMigrate: false
   jpa:
-    generate-ddl: true
+    generate-ddl: false
     show-sql: true
   hibernate:
-    ddl-auto: update
-#  defer-datasource-initialization: true
+    ddl-auto: none
 
 server:
   port: 3000

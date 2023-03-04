@@ -1,8 +1,4 @@
 
--- CRM definition
-
-CREATE DATABASE IF NOT EXISTS CRM;
-
 -- CRM.company definition
 
 CREATE TABLE IF NOT EXISTS `company` (
