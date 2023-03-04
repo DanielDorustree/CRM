@@ -1,4 +1,4 @@
-package com.crmapp;
+package com.emsapp;
 
 import com.vaadin.flow.component.dependency.NpmPackage;
 import com.vaadin.flow.component.page.AppShellConfigurator;

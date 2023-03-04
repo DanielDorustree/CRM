@@ -1,8 +1,8 @@
-package com.crmapp;
+package com.emsapp;
 
-import com.crmapp.data.entity.Employee;
-import com.crmapp.data.service.CrmService;
-import com.crmapp.views.MainLayout;
+import com.emsapp.data.entity.Employee;
+import com.emsapp.data.service.CrmService;
+import com.emsapp.views.MainLayout;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.grid.Grid;
 import com.vaadin.flow.component.orderedlayout.FlexLayout;

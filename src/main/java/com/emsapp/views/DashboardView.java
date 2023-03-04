@@ -1,6 +1,6 @@
-package com.crmapp.views;
+package com.emsapp.views;
 
-import com.crmapp.data.service.CrmService;
+import com.emsapp.data.service.CrmService;
 import com.vaadin.flow.component.Component;
 import com.vaadin.flow.component.html.Span;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;

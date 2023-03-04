@@ -1,8 +1,8 @@
-package com.crmapp;
+package com.emsapp;
 
-import com.crmapp.data.entity.Company;
-import com.crmapp.data.entity.Employee;
-import com.crmapp.data.entity.Status;
+import com.emsapp.data.entity.Company;
+import com.emsapp.data.entity.Employee;
+import com.emsapp.data.entity.Status;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;

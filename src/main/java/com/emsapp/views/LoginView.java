@@ -1,4 +1,4 @@
-package com.crmapp.views;
+package com.emsapp.views;
 
 import com.vaadin.flow.component.html.H1;
 import com.vaadin.flow.component.html.Span;

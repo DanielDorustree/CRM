@@ -1,6 +1,6 @@
-package com.crmapp;
+package com.emsapp;
 
-import com.crmapp.data.entity.Employee;
+import com.emsapp.data.entity.Employee;
 import com.vaadin.flow.component.grid.Grid;
 import com.vaadin.flow.data.provider.ListDataProvider;
 import org.junit.Assert;

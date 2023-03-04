@@ -1,4 +1,4 @@
-package com.crmapp.data.entity;
+package com.emsapp.data.entity;
 
 import javax.persistence.Entity;
 import javax.persistence.Table;

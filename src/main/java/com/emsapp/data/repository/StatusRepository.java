@@ -1,6 +1,6 @@
-package com.crmapp.data.repository;
+package com.emsapp.data.repository;
 
-import com.crmapp.data.entity.Status;
+import com.emsapp.data.entity.Status;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

@@ -1,6 +1,6 @@
-package com.crmapp.data.repository;
+package com.emsapp.data.repository;
 
-import com.crmapp.data.entity.Employee;
+import com.emsapp.data.entity.Employee;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;

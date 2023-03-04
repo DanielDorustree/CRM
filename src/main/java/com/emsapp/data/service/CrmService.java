@@ -1,11 +1,11 @@
-package com.crmapp.data.service;
+package com.emsapp.data.service;
 
-import com.crmapp.data.entity.Company;
-import com.crmapp.data.entity.Employee;
-import com.crmapp.data.entity.Status;
-import com.crmapp.data.repository.CompanyRepository;
-import com.crmapp.data.repository.ContactRepository;
-import com.crmapp.data.repository.StatusRepository;
+import com.emsapp.data.entity.Company;
+import com.emsapp.data.entity.Employee;
+import com.emsapp.data.entity.Status;
+import com.emsapp.data.repository.CompanyRepository;
+import com.emsapp.data.repository.ContactRepository;
+import com.emsapp.data.repository.StatusRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

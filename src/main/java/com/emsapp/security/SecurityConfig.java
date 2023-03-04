@@ -1,8 +1,8 @@
-package com.crmapp.security;
+package com.emsapp.security;
 
 import java.util.Collections;
 
-import com.crmapp.views.LoginView;
+import com.emsapp.views.LoginView;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
