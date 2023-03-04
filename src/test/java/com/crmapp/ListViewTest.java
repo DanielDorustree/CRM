@@ -1,6 +1,6 @@
 package com.crmapp;
 
-import com.crmapp.data.entity.Contact;
+import com.crmapp.data.entity.Employee;
 import com.vaadin.flow.component.grid.Grid;
 import com.vaadin.flow.data.provider.ListDataProvider;
 import org.junit.Assert;
@@ -19,17 +19,17 @@ public class ListViewTest {
 
     @Test
     public void formShownWhenContactSelected() {
-        Grid<Contact> grid = listView.grid;
-        Contact firstContact = getFirstItem(grid);
+        Grid<Employee> grid = listView.grid;
+        Employee firstEmployee = getFirstItem(grid);
 
-        ContactForm form = listView.form;
+        EmployeeForm form = listView.form;
 
         Assert.assertFalse(form.isVisible());
-        grid.asSingleSelect().setValue(firstContact);
+        grid.asSingleSelect().setValue(firstEmployee);
         Assert.assertTrue(form.isVisible());
-        Assert.assertEquals(firstContact.getFirstName(), form.firstName.getValue());
+        Assert.assertEquals(firstEmployee.getFirstName(), form.firstName.getValue());
     }
-    private Contact getFirstItem(Grid<Contact> grid) {
-        return( (ListDataProvider<Contact>) grid.getDataProvider()).getItems().iterator().next();
+    private Employee getFirstItem(Grid<Employee> grid) {
+        return( (ListDataProvider<Employee>) grid.getDataProvider()).getItems().iterator().next();
     }
 }

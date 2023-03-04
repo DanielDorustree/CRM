@@ -1,6 +1,6 @@
 package com.crmapp;
 
-import com.crmapp.data.entity.Contact;
+import com.crmapp.data.entity.Employee;
 import com.crmapp.data.service.CrmService;
 import com.crmapp.views.MainLayout;
 import com.vaadin.flow.component.button.Button;
@@ -24,9 +24,9 @@ import javax.annotation.security.PermitAll;
 @PageTitle("Contacts | Vaadin CRM")
 @PermitAll
 public class ListView extends VerticalLayout {
-    Grid<Contact> grid = new Grid<>(Contact.class);
+    Grid<Employee> grid = new Grid<>(Employee.class);
     TextField filterText = new TextField();
-    ContactForm form;
+    EmployeeForm form;
     CrmService service;
 
     public ListView(CrmService service) {
@@ -35,11 +35,11 @@ public class ListView extends VerticalLayout {
         setSizeFull();
         configureGrid();
 
-        form = new ContactForm(service.findAllCompanies(), service.findAllStatuses());
+        form = new EmployeeForm(service.findAllCompanies(), service.findAllStatuses());
         form.setWidth("25em");
-        form.addListener(ContactForm.SaveEvent.class, this::saveContact);
-        form.addListener(ContactForm.DeleteEvent.class, this::deleteContact);
-        form.addListener(ContactForm.CloseEvent.class, e -> closeEditor());
+        form.addListener(EmployeeForm.SaveEvent.class, this::saveContact);
+        form.addListener(EmployeeForm.DeleteEvent.class, this::deleteContact);
+        form.addListener(EmployeeForm.CloseEvent.class, e -> closeEditor());
 
         FlexLayout content = new FlexLayout(grid, form);
         content.setFlexGrow(2, grid);
@@ -78,23 +78,23 @@ public class ListView extends VerticalLayout {
         return toolbar;
     }
 
-    private void saveContact(ContactForm.SaveEvent event) {
+    private void saveContact(EmployeeForm.SaveEvent event) {
         service.saveContact(event.getContact());
         updateList();
         closeEditor();
     }
 
-    private void deleteContact(ContactForm.DeleteEvent event) {
+    private void deleteContact(EmployeeForm.DeleteEvent event) {
         service.deleteContact(event.getContact());
         updateList();
         closeEditor();
     }
 
-    public void editContact(Contact contact) {
-        if (contact == null) {
+    public void editContact(Employee employee) {
+        if (employee == null) {
             closeEditor();
         } else {
-            form.setContact(contact);
+            form.setContact(employee);
             form.setVisible(true);
             addClassName("editing");
         }
@@ -102,7 +102,7 @@ public class ListView extends VerticalLayout {
 
     void addContact() {
         grid.asSingleSelect().clear();
-        editContact(new Contact());
+        editContact(new Employee());
     }
 
     private void closeEditor() {

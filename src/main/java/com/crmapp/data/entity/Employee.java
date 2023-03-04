@@ -11,8 +11,8 @@ import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 
 @Entity
-@Table(name = "contact")
-public class Contact extends AbstractEntity {
+@Table(name = "employee")
+public class Employee extends AbstractEntity {
 
     @NotEmpty
     private String firstName = "";

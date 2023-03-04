@@ -6,11 +6,12 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="crm-application" />
+        <module name="ems-application" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="crm" target="11" />
+      <module name="crm-application" target="17" />
       <module name="flowcrmtutorial" target="11" />
     </bytecodeTargetLevel>
   </component>
@@ -18,6 +19,7 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="crm" options="-parameters" />
       <module name="crm-application" options="-parameters" />
+      <module name="ems-application" options="-parameters" />
       <module name="flowcrmtutorial" options="-parameters" />
     </option>
   </component>

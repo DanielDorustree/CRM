@@ -1,7 +1,7 @@
 package com.crmapp.data.service;
 
 import com.crmapp.data.entity.Company;
-import com.crmapp.data.entity.Contact;
+import com.crmapp.data.entity.Employee;
 import com.crmapp.data.entity.Status;
 import com.crmapp.data.repository.CompanyRepository;
 import com.crmapp.data.repository.ContactRepository;
@@ -25,7 +25,7 @@ public class CrmService {
         this.statusRepository = statusRepository;
     }
 
-    public List<Contact> findAllContacts(String stringFilter) {
+    public List<Employee> findAllContacts(String stringFilter) {
         if (stringFilter == null || stringFilter.isEmpty()) {
             return contactRepository.findAll();
         } else {
@@ -37,16 +37,16 @@ public class CrmService {
         return contactRepository.count();
     }
 
-    public void deleteContact(Contact contact) {
-        contactRepository.delete(contact);
+    public void deleteContact(Employee employee) {
+        contactRepository.delete(employee);
     }
 
-    public void saveContact(Contact contact) {
-        if (contact == null) {
-            System.err.println("Contact is null. Are you sure you have connected your form to the application?");
+    public void saveContact(Employee employee) {
+        if (employee == null) {
+            System.err.println("Employee is null. Are you sure you have connected your form to the application?");
             return;
         }
-        contactRepository.save(contact);
+        contactRepository.save(employee);
     }
 
     public List<Company> findAllCompanies() {

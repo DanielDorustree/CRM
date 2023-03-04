@@ -1,7 +1,7 @@
 package com.crmapp;
 
 import com.crmapp.data.entity.Company;
-import com.crmapp.data.entity.Contact;
+import com.crmapp.data.entity.Employee;
 import com.crmapp.data.entity.Status;
 import org.junit.Assert;
 import org.junit.Before;
@@ -11,10 +11,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicReference;
 
-public class ContactFormTest {
+public class EmployeeFormTest {
     private List<Company> companies;
     private List<Status> statuses;
-    private Contact marcUsher;
+    private Employee marcUsher;
     private Company company1;
     private Company company2;
     private Status status1;
@@ -38,7 +38,7 @@ public class ContactFormTest {
         statuses.add(status1);
         statuses.add(status2);
 
-        marcUsher = new Contact();
+        marcUsher = new Employee();
         marcUsher.setFirstName("Daniel");
         marcUsher.setLastName("Imman");
         marcUsher.setEmail("daniel@imman.com");
@@ -48,7 +48,7 @@ public class ContactFormTest {
 
     @Test
     public void formFieldsPopulated() {
-        ContactForm form = new ContactForm(companies, statuses);
+        EmployeeForm form = new EmployeeForm(companies, statuses);
         form.setContact(marcUsher);
         Assert.assertEquals("Daniel", form.firstName.getValue());
         Assert.assertEquals("Imman", form.lastName.getValue());
@@ -59,26 +59,26 @@ public class ContactFormTest {
 
     @Test
     public void saveEventHasCorrectValues() {
-        ContactForm form = new ContactForm(companies, statuses);
-        Contact contact = new Contact();
-        form.setContact(contact);
+        EmployeeForm form = new EmployeeForm(companies, statuses);
+        Employee employee = new Employee();
+        form.setContact(employee);
         form.firstName.setValue("Vel");
         form.lastName.setValue("Sankar");
         form.company.setValue(company1);
         form.email.setValue("vel@sankar.com");
         form.status.setValue(status2);
 
-        AtomicReference<Contact> savedContactRef = new AtomicReference<>(null);
-        form.addListener(ContactForm.SaveEvent.class, e -> {
+        AtomicReference<Employee> savedContactRef = new AtomicReference<>(null);
+        form.addListener(EmployeeForm.SaveEvent.class, e -> {
             savedContactRef.set(e.getContact());
         });
         form.save.click();
-        Contact savedContact = savedContactRef.get();
+        Employee savedEmployee = savedContactRef.get();
 
-        Assert.assertEquals("Vel", savedContact.getFirstName());
-        Assert.assertEquals("Sankar", savedContact.getLastName());
-        Assert.assertEquals("vel@sankar.com", savedContact.getEmail());
-        Assert.assertEquals(company1, savedContact.getCompany());
-        Assert.assertEquals(status2, savedContact.getStatus());
+        Assert.assertEquals("Vel", savedEmployee.getFirstName());
+        Assert.assertEquals("Sankar", savedEmployee.getLastName());
+        Assert.assertEquals("vel@sankar.com", savedEmployee.getEmail());
+        Assert.assertEquals(company1, savedEmployee.getCompany());
+        Assert.assertEquals(status2, savedEmployee.getStatus());
     }
 }

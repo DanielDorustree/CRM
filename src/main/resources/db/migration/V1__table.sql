@@ -17,7 +17,7 @@ CREATE TABLE IF NOT EXISTS `status` (
 
 -- CRM.contact definition
 
-CREATE TABLE IF NOT EXISTS `contact` (
+CREATE TABLE IF NOT EXISTS `employee` (
   `id` varchar(255) NOT NULL,
   `email` varchar(255) DEFAULT NULL,
   `first_name` varchar(255) DEFAULT NULL,
