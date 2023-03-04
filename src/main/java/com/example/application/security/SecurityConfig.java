@@ -19,8 +19,8 @@ public class SecurityConfig extends VaadinWebSecurity {
 
   private static class CrmInMemoryUserDetailsManager extends InMemoryUserDetailsManager {
     public CrmInMemoryUserDetailsManager() {
-      createUser(new User("user",
-              "{noop}userpass",
+      createUser(new User("developer@dorustree.in",
+              "{noop}password",
               Collections.singleton(new SimpleGrantedAuthority("ROLE_USER"))));
     }
   }
