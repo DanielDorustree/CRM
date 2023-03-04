@@ -12,7 +12,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  */
 @SpringBootApplication
 @NpmPackage(value = "lumo-css-framework", version = "^4.0.10")
-@Theme("flowcrmtutorial")
+@Theme("ems")
 @PWA(name = "VaadinCRM", shortName = "CRM", offlinePath="offline.html", offlineResources = { "./images/offline.png"})
 public class Application implements AppShellConfigurator {
 
