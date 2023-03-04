@@ -1,25 +1,21 @@
-package com.example.application.data.entity;
-
-import org.hibernate.annotations.Type;
+package com.crmapp.data;
 
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.MappedSuperclass;
-import java.util.UUID;
 
 @MappedSuperclass
 public abstract class AbstractEntity {
 
     @Id
     @GeneratedValue
-    @Type(type = "uuid-char")
-    private UUID id;
+    private Integer id;
 
-    public UUID getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(UUID id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 

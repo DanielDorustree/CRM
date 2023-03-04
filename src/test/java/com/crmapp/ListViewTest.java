@@ -1,6 +1,6 @@
-package com.example.application;
+package com.crmapp;
 
-import com.example.application.data.entity.Contact;
+import com.crmapp.data.entity.Contact;
 import com.vaadin.flow.component.grid.Grid;
 import com.vaadin.flow.data.provider.ListDataProvider;
 import org.junit.Assert;

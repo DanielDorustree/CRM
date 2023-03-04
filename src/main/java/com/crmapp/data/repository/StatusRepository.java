@@ -1,6 +1,6 @@
-package com.example.application.data.repository;
+package com.crmapp.data.repository;
 
-import com.example.application.data.entity.Status;
+import com.crmapp.data.entity.Status;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

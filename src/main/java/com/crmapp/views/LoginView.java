@@ -1,4 +1,4 @@
-package com.example.application.views;
+package com.crmapp.views;
 
 import com.vaadin.flow.component.html.H1;
 import com.vaadin.flow.component.html.Span;

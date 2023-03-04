@@ -1,4 +1,4 @@
-package com.example.application.data.entity;
+package com.crmapp.data.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 

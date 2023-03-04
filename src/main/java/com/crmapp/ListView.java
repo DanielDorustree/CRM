@@ -1,8 +1,8 @@
-package com.example.application;
+package com.crmapp;
 
-import com.example.application.data.entity.Contact;
-import com.example.application.data.service.CrmService;
-import com.example.application.views.MainLayout;
+import com.crmapp.data.entity.Contact;
+import com.crmapp.data.service.CrmService;
+import com.crmapp.views.MainLayout;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.grid.Grid;
 import com.vaadin.flow.component.orderedlayout.FlexLayout;

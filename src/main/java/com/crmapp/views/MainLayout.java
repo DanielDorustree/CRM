@@ -1,7 +1,7 @@
-package com.example.application.views;
+package com.crmapp.views;
 
-import com.example.application.security.SecurityService;
-import com.example.application.ListView;
+import com.crmapp.ListView;
+import com.crmapp.security.SecurityService;
 import com.vaadin.flow.component.applayout.AppLayout;
 import com.vaadin.flow.component.applayout.DrawerToggle;
 import com.vaadin.flow.component.button.Button;

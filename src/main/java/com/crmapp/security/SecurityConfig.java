@@ -1,8 +1,8 @@
-package com.example.application.security;
+package com.crmapp.security;
 
 import java.util.Collections;
 
-import com.example.application.views.LoginView;
+import com.crmapp.views.LoginView;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;

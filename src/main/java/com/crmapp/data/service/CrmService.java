@@ -1,11 +1,11 @@
-package com.example.application.data.service;
+package com.crmapp.data.service;
 
-import com.example.application.data.entity.Company;
-import com.example.application.data.entity.Contact;
-import com.example.application.data.entity.Status;
-import com.example.application.data.repository.CompanyRepository;
-import com.example.application.data.repository.ContactRepository;
-import com.example.application.data.repository.StatusRepository;
+import com.crmapp.data.entity.Company;
+import com.crmapp.data.entity.Contact;
+import com.crmapp.data.entity.Status;
+import com.crmapp.data.repository.CompanyRepository;
+import com.crmapp.data.repository.ContactRepository;
+import com.crmapp.data.repository.StatusRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

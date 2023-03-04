@@ -1,4 +1,4 @@
-package com.example.application.data.entity;
+package com.crmapp.data.entity;
 
 import org.hibernate.annotations.Formula;
 
