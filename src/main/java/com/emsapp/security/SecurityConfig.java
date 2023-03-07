@@ -17,8 +17,8 @@ import com.vaadin.flow.spring.security.VaadinWebSecurity;
 @Configuration
 public class SecurityConfig extends VaadinWebSecurity {
 
-  private static class CrmInMemoryUserDetailsManager extends InMemoryUserDetailsManager {
-    public CrmInMemoryUserDetailsManager() {
+  private static class EMSInMemoryUserDetailsManager extends InMemoryUserDetailsManager {
+    public EMSInMemoryUserDetailsManager() {
       createUser(new User("developer@dorustree.in",
               "{noop}password",
               Collections.singleton(new SimpleGrantedAuthority("ROLE_USER"))));
@@ -37,6 +37,6 @@ public class SecurityConfig extends VaadinWebSecurity {
 
   @Bean
   public InMemoryUserDetailsManager userDetailsService() {
-    return new CrmInMemoryUserDetailsManager();
+    return new EMSInMemoryUserDetailsManager();
   }
 }
