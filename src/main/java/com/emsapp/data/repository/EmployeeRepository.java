@@ -8,7 +8,7 @@ import org.springframework.data.repository.query.Param;
 
 import java.util.List;
 
-public interface ContactRepository extends JpaRepository<Employee, Integer> {
+public interface EmployeeRepository extends JpaRepository<Employee, Integer> {
 
     @Query("select e from Employee e " +
         "where lower(e.firstName) like lower(concat('%', :searchTerm, '%')) " +

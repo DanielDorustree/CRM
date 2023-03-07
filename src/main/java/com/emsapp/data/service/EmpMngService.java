@@ -4,41 +4,41 @@ import com.emsapp.data.entity.Company;
 import com.emsapp.data.entity.Employee;
 import com.emsapp.data.entity.Status;
 import com.emsapp.data.repository.CompanyRepository;
-import com.emsapp.data.repository.ContactRepository;
+import com.emsapp.data.repository.EmployeeRepository;
 import com.emsapp.data.repository.StatusRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
-public class CrmService {
+public class EmpMngService {
 
-    private final ContactRepository contactRepository;
+    private final EmployeeRepository employeeRepository;
     private final CompanyRepository companyRepository;
     private final StatusRepository statusRepository;
 
-    public CrmService(ContactRepository contactRepository,
-                      CompanyRepository companyRepository,
-                      StatusRepository statusRepository) {
-        this.contactRepository = contactRepository;
+    public EmpMngService(EmployeeRepository employeeRepository,
+                         CompanyRepository companyRepository,
+                         StatusRepository statusRepository) {
+        this.employeeRepository = employeeRepository;
         this.companyRepository = companyRepository;
         this.statusRepository = statusRepository;
     }
 
     public List<Employee> findAllContacts(String stringFilter) {
         if (stringFilter == null || stringFilter.isEmpty()) {
-            return contactRepository.findAll();
+            return employeeRepository.findAll();
         } else {
-            return contactRepository.search(stringFilter);
+            return employeeRepository.search(stringFilter);
         }
     }
 
     public long countContacts() {
-        return contactRepository.count();
+        return employeeRepository.count();
     }
 
     public void deleteContact(Employee employee) {
-        contactRepository.delete(employee);
+        employeeRepository.delete(employee);
     }
 
     public void saveContact(Employee employee) {
@@ -46,7 +46,7 @@ public class CrmService {
             System.err.println("Employee is null. Are you sure you have connected your form to the application?");
             return;
         }
-        contactRepository.save(employee);
+        employeeRepository.save(employee);
     }
 
     public List<Company> findAllCompanies() {

@@ -1,6 +1,6 @@
 package com.emsapp.views;
 
-import com.emsapp.data.service.CrmService;
+import com.emsapp.data.service.EmpMngService;
 import com.vaadin.flow.component.Component;
 import com.vaadin.flow.component.html.Span;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
@@ -10,12 +10,12 @@ import com.vaadin.flow.router.Route;
 import javax.annotation.security.PermitAll;
 
 @Route(value = "dashboard", layout = MainLayout.class)
-@PageTitle("Dashboard | Vaadin CRM")
+@PageTitle("Dashboard | Vaadin EMS")
 @PermitAll
 public class DashboardView extends VerticalLayout {
-    private final CrmService service;
+    private final EmpMngService service;
 
-    public DashboardView(CrmService service) {
+    public DashboardView(EmpMngService service) {
         this.service = service;
         addClassName("dashboard-view");
         setDefaultHorizontalComponentAlignment(Alignment.CENTER);

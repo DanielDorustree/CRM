@@ -1,7 +1,7 @@
 package com.emsapp;
 
 import com.emsapp.data.entity.Employee;
-import com.emsapp.data.service.CrmService;
+import com.emsapp.data.service.EmpMngService;
 import com.emsapp.views.MainLayout;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.grid.Grid;
@@ -21,15 +21,15 @@ import javax.annotation.security.PermitAll;
 @Component
 @Scope("prototype")
 @Route(value="", layout = MainLayout.class)
-@PageTitle("Contacts | Vaadin CRM")
+@PageTitle("Employee | Vaadin EMS")
 @PermitAll
 public class ListView extends VerticalLayout {
     Grid<Employee> grid = new Grid<>(Employee.class);
     TextField filterText = new TextField();
     EmployeeForm form;
-    CrmService service;
+    EmpMngService service;
 
-    public ListView(CrmService service) {
+    public ListView(EmpMngService service) {
         this.service = service;
         addClassName("list-view");
         setSizeFull();
